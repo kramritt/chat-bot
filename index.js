@@ -13,8 +13,7 @@ client.on('messageCreate', async (message) => {
     const userMessage = message.content.toLowerCase();
 
     try {
-        const res = await axios.get(`https://api.infinitybots.gg/v1/chatbot?message=${encodeURIComponent(userMessage)}`);
-        const botReply = res.data.message;
+        const res = await axios.get(`https://poe-api.com/chat?message=${encodeURIComponent(userMessage)}`);
 
         message.reply(`🤖 **AI Response:** ${botReply}`);
 
